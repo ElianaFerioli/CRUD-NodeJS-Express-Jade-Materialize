@@ -1,0 +1,27 @@
+extends layout
+block contenido
+  h1 Listado de usuarios
+  h5 Insertar Usuario 
+    a(class="btn-floating btn-large red center" href="formulario")
+      i(class="large material-icons") input
+  div(class="container")
+    table(class="striped centered")
+      thead
+        tr
+          th Nombre
+          th Apellido
+          th Edad
+          th País
+          th
+      tbody
+        for u in usuarios
+          tr
+            td #{u.nombre}
+            td #{u.apellido}
+            td #{u.edad}
+            td #{u.pais}
+            td
+              a(class="btn-floating btn-large red center" href="modificar?id=#{u._id}")
+                i(class="large material-icons") mode_edit
+              a(class="btn-floating btn-large red right" href="borrar?id=#{u._id}")
+                i(class="large material-icons") delete

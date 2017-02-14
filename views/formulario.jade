@@ -1,0 +1,21 @@
+extends layout
+block contenido
+  div(class="container")
+    h1(class="green-text") Nuevo Usuario
+    form(action="inserta-usuario" method="post")
+      div(class="input-field")
+        label(for="nombre") Nombre
+        input(type="text" name="nombre" placeholer="Nombre" id="nombre" autofocus="true")
+      div(class="input-field")
+        label(for="apellido") Apellido
+        input(type="text" name="apellido" placeholer="Apellido" id="apellido")
+      div(class="input-field")
+        label(for="edad") Edad
+        input(type="number" name="edad" placeholer="Edad" id="edad" step="1" min="1")
+      div(class="input-field")
+        label(for="pais") País
+        input(type="text" name="pais" placeholer="Pais" id="pais" step="1")
+      div(class="row center")
+        div(class="input-field")
+          input(type="submit" value="Insertar" class="btn waves-effect waves-light")
+    
